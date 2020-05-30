@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:labelFor="@+id/etChars"
+        android:id="@+id/tvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Tamanho da senha"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <EditText
+        android:id="@+id/etChars"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:ems="10"
+        android:hint="Quantos caracteres?"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/tvMsg"
+        app:layout_constraintTop_toBottomOf="@+id/tvMsg" />
+
+    <Button
+        android:id="@+id/btnGeneratePass"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Gerar Senha"
+        app:layout_constraintStart_toStartOf="@+id/etChars"
+        app:layout_constraintTop_toBottomOf="@+id/etChars" />
+
+    <TextView
+        android:id="@+id/tvShowPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/btnGeneratePass"
+        app:layout_constraintTop_toBottomOf="@+id/btnGeneratePass"
+        android:text="SUA SENHA"
+        android:textSize="8pt"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorTextShowPass"
+    />
+
+    <Button
+        android:id="@+id/btnCopy"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Copiar para área de transferência"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/tvShowPass"
+        app:layout_constraintTop_toBottomOf="@+id/tvShowPass" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Salvar a senha"
+        app:layout_constraintStart_toStartOf="@+id/btnCopy"
+        app:layout_constraintTop_toBottomOf="@+id/btnCopy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
